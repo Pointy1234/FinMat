@@ -1,0 +1,702 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Заголовок презентации -->
+		<title>Финансовая математика</title>
+		<meta name="description" content="GIT">
+		<!-- Информация об авторе -->
+		<meta name="author" content="Мельников Юрий">
+		
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		
+		<!-- Тема презентации -->
+		<link rel="stylesheet" href="dist/theme/league.css" id="theme">
+		
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<!-- Класс center используется для вертикальной центровки -->
+				<!-- data-markdown-separator="^Notes:" позволяет писать комментарии к слайду -->
+				<!-- data-markdown и <script type="text/template"> позволяет использовать markdown синтаксис -->
+				<section class="center" data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						Финансовая математика
+						=======================
+
+						Notes: Заголовок презентации
+					</script>
+				</section>
+
+				<!-- Все формулы оборачиваем в $$. Тем самым отдаем их рендеру KaTeX -->
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						Определение финансовой математики
+						-------------------------
+
+						Финансовая математика — раздел прикладной математики,
+						имеющий дело с математическими задачами, связанными с финансовыми расчётами.
+						В финансовой математике любой финансовый инструмент рассматривается с точки зрения генерируемого
+						этим инструментом некоторого (возможно случайного) денежного потока.
+						
+						Notes: Определение финансовой математики
+					</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						Формула наращения и дисконтирования по простым процентным ставкам
+						-------------------------
+
+						Наращенная сумма представляет собой сумму первоначальной суммы и наращенных процентов:
+						$$S = P + I = P + Pni = P(1+ ni)$$ - Наращение
+						$$P = S - Snd = S(1- nd)$$ - Дисконтирование
+
+						Notes: C равно пи + и равно П умноженное на н умноженное на и, равно П умноженное на сумму один плюс н умноженное на и
+					</script>
+				</section>
+
+				
+				
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						практики начисления процентов
+						---------------------------------
+						
+
+						1.Точные проценты с точным числом дней ссуды (обозначается 365/365 или АСТ/АСТ). 
+					Применяется центральными банками и крупными коммерческими банками в Великобритании, США, дает самые точные результаты.
+					процентная ставка наращивание дисконтирование вексель 
+
+					Notes:Английская практика		
+					</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						практики начисления процентов
+						---------------------------------
+						
+
+						2. Обыкновенные проценты с точным числом дней ссуды (365/360 или АСТ/360).
+						Этот метод, иногда называемый банковским, распространен в межстрановых ссудных операциях коммерческих банков,
+						во внутристрановых -- во Франции, Бельгии, Швейцарии. Дает несколько больший результат, чем применение точных процентов.
+
+						Notes:Банковское правило	
+					</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						практики начисления процентов
+						-------------------------
+						
+
+						3. Обыкновенные проценты с приближенным числом дней ссуд (360/360). Такой метод принят в практике коммерческих банков Германии, Швеции, Дании.
+						  Применяется тогда, когда не требуется большой точности, например при промежуточных расчетах
+						
+
+						  Notes:Немецкая практика	
+					</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						Формулы наращения и дисконтирования по сложным процентным ставкам
+						-------------------------
+						
+
+						$$ S=P(1+i)^n $$
+						Начисление процентов 1 раз в год
+						где S - наращенная сумма,
+						i - годовая ставка сложных процентов,
+						n - срок ссуды,
+						Notes:Наращение по сложной процентной ставке
+					</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						Формулы наращения и дисконтирования по сложным процентным ставкам
+						-------------------------
+						
+						
+						$$S=(1+\frac i m)^{nm} $$
+						Начисление процентов несколько раз в год
+						Notes:Наращение по сложной процентной ставке с начислением процентом несколько раз в год(m)
+					</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						Формулы наращения и дисконтирования по сложным процентным ставкам
+						-------------------------
+						
+						
+						$$S_{n}=P_{0}(1+\frac{i^{(m)}}{m})^{mn} $$ 
+						Наращение суммы вклада по номинальной ставке
+						Notes:Наращение по номинальной  ставке с начислением процентом несколько раз в год(m)
+					</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						Формулы наращения и дисконтирования по сложным процентным ставкам
+						-------------------------
+						
+						
+						$$P_{0}=S_{n}(1-d)^n $$ 
+						Дисконтирование по сложной учетной ставке
+						Notes:Дисконтирование по сложной учетной ставке 1 раз в год
+					</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						Формулы наращения и дисконтирования по сложным процентным ставкам
+						-------------------------
+						
+						
+						$$P_{0}=S_{n}(1-\frac{i^{(m)}}{m})^{mn} $$ 
+						Дисконтирование по номинальной учетной ставке
+	
+					</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						Примеры решения
+						-------------------------
+						Определим проценты и сумму накопленного долга,
+						если ссуда равна 500 тыс.руб. , срок 3 года, проценты простые по ставке
+						10% годовых (i = 0,1):
+						$$I = 500\cdot5\cdot0,1 = 250$$ тыс. руб.,
+						$$S = 500 + 250 = 750$$ тыс. руб.
+					</script>
+				</section>
+
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						Примеры решения
+						-------------------------
+
+						1 млн руб. положен 1-го января на месячный депозит под 10% годовых. Какова наращенная сумма, если операция повторяется 3 раза?
+						Если начислять точные проценты (365/365), то
+						$$S=1(1+\frac 31 365 \cdot 0.1)(1+ \frac 31 365 \cdot 0.1)=1.024956$$ 
+						
+
+					</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						Примеры решения
+						-------------------------
+
+						Начисление обыкновенных процентов (360/360) при реинвестировании дает
+						$$S=1(1+ \frac 30 360 \cdot 0.1)^3=1.03375$$
+
+					</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						Примеры решения
+						-------------------------
+						Через 180 дней после подписания договора должник уплатит 1 млн руб.
+						 Кредит выдан под 10% годовых. Какова первоначальная сумма долга при условии, что временная база равна 360 дням?
+
+						$$P=\frac{1}{1+0.5 \cdot 0.1}=0.952380$$
+						$$D=S-P=1-0,95238=0,047619$$
+
+					</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						Примеры решения
+						-------------------------
+						Вексель выдан на сумму 1 млн руб. с уплатой
+						17.11.2003. Владелец векселя учел его в банке 23.09.2003 по учетной ставке 10% (АСТ/360).
+						Оставшийся до конца срока период равен 55 дням. Полученная при учете сумма (без уплаты комиссионных) равна
+
+						$$P=1(1- \frac 55 360 \cdot 0.1)=984722.2$$
+						$$D=S-P=100000-984722.2=15277.8$$
+
+					</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						Примеры решения
+						-------------------------
+						Какова должна быть продолжительность ссуды в
+						днях для того, чтобы долг, равный 10 тыс. руб., вырос до 15 тыс. руб. при
+						условии, что начисляются простые проценты по ставке 10% годовых
+						(АСТ/АСТ)?
+
+						$$t=\frac{15-10}{10\cdot0.1}365=1825 \text{дня} =5 \text{лет}$$
+						
+
+					</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						Примеры решения
+						-------------------------
+						В контракте предусматривается погашение обязательства в сумме 100 тыс. руб. через 180 дней. Первоначальная сумма
+						долга 80 тыс. руб. (АСТ/360). Определить доходность ссудной операции
+						для кредитора в виде ставки процента и учетной ставки. 
+
+						$$i=\frac{100-80}{80\cdot180}360=0.5$$
+						$$d=\frac{100-80}{100\cdot180}360=0.4$$
+						
+
+					</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						Примеры решения
+						-------------------------
+						Кредит для покупки товара на сумму 1млн руб.
+						открыт на 4 года, процентная ставка — 10% годовых, выплаты в конце
+						каждого месяца. Сумма долга с процентами
+
+						$$S=1(1+4\cdot-0.1)=1.4\text{млн.руб.}$$
+						$$R=\frac{1400}{4\cdot12}=29.17\text{тыс.руб}$$
+						
+
+					</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						Примеры решения
+						-------------------------
+						Имеются два обязательства. Условия первого:
+						выплатить 400 тыс. руб. через 4 месяца; условия второго: выплатить 450
+						тыс. рублей через 8 месяцев. Можно ли считать их равноценными?
+
+						$$P_{1}=\frac{400}{1+0.(3)\cdot0.2}=375\text{тыс.руб}$$
+						$$P_{2}=\frac{450}{1+0.75\cdot0.2}=397.06\text{тыс.руб}$$
+						
+
+					</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						Примеры решения
+						-------------------------
+						Какой величины достигнет долг, равный 1 млн руб.
+						через 3 года при росте по сложной ставке 10% годовых?
+						$$S=1(1+0.1)^3=1.331\text{млн.руб}$$
+						
+
+					</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						Примеры решения
+						-------------------------
+						На сколько изменится срок удвоения вклада, если от простых процентов i = 18% перейти к начислению сложных процентов?
+						$$n_{1}=\frac 1 0.18 = 5.56$$
+						$$n_{2}=\frac{ln2}{ln(1+0.18)}=4.19$$
+						5.56 − 4.19 = 1.37 года
+						
+
+					</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						Примеры решения
+						-------------------------
+						Контракт предусматривает начисление процентов в первый год 10%, в каждом последующем полугодии ставка повышается на 1%.
+						Найти множитель наращения за 2 года. 
+						$$1+1\cdot0.1+0.5\cdot0.11+0.5\cdot0.12=1.215$$
+						
+
+					</script>
+				</section>
+
+				<section data-markdown data-markdown-separator="^Notes:">
+					<script type="text/template">
+						Примеры решения
+						-------------------------
+						Сравниваются два платежных обязательства: по условиям первого требуется выплатить 395 тыс.руб. через 5,5 месяцев, по условиям второго 430 тыс.руб. через 9 месяцев.
+						Определить простую процентную ставку, при которой платежные обязательства можно считать равноценными. Временная база 360 дней.
+						$$P=S(1-nd)=10000\cdot(1-0.2\cdot \frac{71}{360})=9605.56$$
+						$$D=Snd=10000\cdot0.2\cdot\frac{71}{360} =394.44$$
+						
+
+					</script>
+				</section>
+				
+				<section>
+					<h2>Наращение по простым процентам(365/365)</h2>
+					<!-- Функция и границы трапеции -->
+					<label for="func1">Сумма</label>
+					<input type="text" id="func1">
+					<label for="a1">простая процентная ставка</label>
+					<input type="text" id="a1">
+					<label for="b1">Время в днях</label>
+					<input type="text" id="b1">
+					<!-- Кнопка запуска программы -->
+					<input type="button" value="Рассчитать наращенную сумму по простой процентной ставке" id="getResult1">
+					<!-- Вывод результата -->
+					<output id="result1"></output>
+					
+				</section>
+				<section>
+					<h2>Наращение по простым процентам(360/360)</h2>
+					<!-- Функция и границы трапеции -->
+					<label for="func2">Сумма</label>
+					<input type="text" id="func2">
+					<label for="a2">простая процентная ставка</label>
+					<input type="text" id="a2">
+					<label for="b2">Время в днях</label>
+					<input type="text" id="b2">
+					<!-- Кнопка запуска программы -->
+					<input type="button" value="Рассчитать наращенную сумму по простой процентной ставке" id="getResult2">
+					<!-- Вывод результата -->
+					<output id="result2"></output>
+					
+				</section>
+				<section>
+					<h2>Наращение по сложным процентам(365/365)</h2>
+					<!-- Функция и границы трапеции -->
+					<label for="func3">Сумма</label>
+					<input type="text" id="func3">
+					<label for="a3">сложная процентная ставка</label>
+					<input type="text" id="a3">
+					<label for="b3">Время в днях</label>
+					<input type="text" id="b3">
+					<!-- Кнопка запуска программы -->
+					<input type="button" value="Рассчитать наращенную сумму по сложной процентной ставке" id="getResult3">
+					<!-- Вывод результата -->
+					<output id="result3"></output>
+					
+				</section>
+				<section>
+					<h2>Наращение по сложным процентам(360/360)</h2>
+					<!-- Функция и границы трапеции -->
+					<label for="func4">Сумма</label>
+					<input type="text" id="func4">
+					<label for="a4">сложная процентная ставка</label>
+					<input type="text" id="a4">
+					<label for="b4">Время в днях</label>
+					<input type="text" id="b4">
+					<!-- Кнопка запуска программы -->
+					<input type="button" value="Рассчитать наращенную сумму по сложной процентной ставке" id="getResult4">
+					<!-- Вывод результата -->
+					<output id="result4"></output>
+					
+				</section>
+				<section>
+					<h2>Дисконтирование по простым процентам(365/365)</h2>
+					<!-- Функция и границы трапеции -->
+					<label for="func5">Сумма</label>
+					<input type="text" id="func5">
+					<label for="a5">простая процентная ставка</label>
+					<input type="text" id="a5">
+					<label for="b5">Время в днях</label>
+					<input type="text" id="b5">
+					<!-- Кнопка запуска программы -->
+					<input type="button" value="Рассчитать наращенную сумму по простой процентной ставке" id="getResult5">
+					<!-- Вывод результата -->
+					<output id="result5"></output>
+					
+				</section>
+				<section>
+					<h2>Дисконтирование по простым процентам(360/360)</h2>
+					<!-- Функция и границы трапеции -->
+					<label for="func6">Сумма</label>
+					<input type="text" id="func6">
+					<label for="a6">простая процентная ставка</label>
+					<input type="text" id="a6">
+					<label for="b6">Время в днях</label>
+					<input type="text" id="b6">
+					<!-- Кнопка запуска программы -->
+					<input type="button" value="Рассчитать наращенную сумму по простой процентной ставке" id="getResult6">
+					<!-- Вывод результата -->
+					<output id="result6"></output>
+					
+				</section>
+				<section>
+					<h2>Дисконтирование по сложным процентам(365/365)</h2>
+					<!-- Функция и границы трапеции -->
+					<label for="func7">Сумма</label>
+					<input type="text" id="func7">
+					<label for="a7">сложная процентная ставка</label>
+					<input type="text" id="a7">
+					<label for="b7">Время в днях</label>
+					<input type="text" id="b7">
+					<!-- Кнопка запуска программы -->
+					<input type="button" value="Рассчитать наращенную сумму по сложной процентной ставке" id="getResult7">
+					<!-- Вывод результата -->
+					<output id="result7"></output>
+					
+				</section>
+				<section>
+					<h2>Дисконтирование по сложным процентам(360/360)</h2>
+					<!-- Функция и границы трапеции -->
+					<label for="func8">Сумма</label>
+					<input type="text" id="func8">
+					<label for="a8">сложная процентная ставка</label>
+					<input type="text" id="a8">
+					<label for="b8">Время в днях</label>
+					<input type="text" id="b8">
+					<!-- Кнопка запуска программы -->
+					<input type="button" value="Рассчитать наращенную сумму по сложной процентной ставке" id="getResult8">
+					<!-- Вывод результата -->
+					<output id="result8"></output>
+					
+				</section>
+				<section class="center" data-menu-title="Заключительный слайд">
+					Спасибо за внимание
+				</section>
+
+			</div>
+		</div>
+		
+		<!-- Библиотеки для математических рассчетов -->
+		<script src="plugin/algebrite/algebrite.bundle-for-browser.js"></script>
+		<script src="plugin/math.js/math.min.js"></script>
+		<script src="plugin/plotly/plotly.min.js"></script>
+		<script src="plugin/underscore/underscore-min.js"></script>
+		
+		<!-- Стандартный наьор подключения -->
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+
+		<script>
+			//Результат игры
+			let resultGame;
+
+			//Событие, чтобы скрипты начали выполняться только после загрузки
+			window.onload = () => {
+
+				//Нахождение интеграла
+				
+
+				//Нахождение площади трапеции
+				document.querySelector('#getResult1').onclick = () => {
+					//Получаем значение из полей ввода
+					let a = document.querySelector('#a1').value;
+					let b = document.querySelector('#b1').value;
+					let func = document.querySelector('#func1').value;
+					//Ссылка на тег вывода результата
+					let result = document.querySelector('#result1');
+					//Проверка полей на пустоту
+					if (func === '') {
+						return result.innerHTML = 'Вы не ввели сумму';
+					}
+					if (a === '' && b !== '') {
+						return result.innerHTML = 'Вы не ввели ставку';
+					}
+					if (a !== '' && b === '') {
+						return result.innerHTML = 'Вы не ввели время в годах';
+					}
+
+					//Выводим наращенную сумму
+					return result.innerHTML = Algebrite.eval(parseFloat(func)*(1+parseFloat(a)*parseFloat(b/365)));
+				}
+
+				document.querySelector('#getResult2').onclick = () => {
+					//Получаем значение из полей ввода
+					let a = document.querySelector('#a2').value;
+					let b = document.querySelector('#b2').value;
+					let func = document.querySelector('#func2').value;
+					//Ссылка на тег вывода результата
+					let result = document.querySelector('#result2');
+					//Проверка полей на пустоту
+					if (func === '') {
+						return result.innerHTML = 'Вы не ввели сумму';
+					}
+					if (a === '' && b !== '') {
+						return result.innerHTML = 'Вы не ввели ставку';
+					}
+					if (a !== '' && b === '') {
+						return result.innerHTML = 'Вы не ввели время в годах';
+					}
+
+					//Выводим наращенную сумму
+					return result.innerHTML = Algebrite.eval(parseFloat(func)*(1+parseFloat(a)*parseFloat(b/360)));
+				}
+				document.querySelector('#getResult3').onclick = () => {
+					//Получаем значение из полей ввода
+					let a = document.querySelector('#a3').value;
+					let b = document.querySelector('#b3').value;
+					let func = document.querySelector('#func3').value;
+					//Ссылка на тег вывода результата
+					let result = document.querySelector('#result3');
+					//Проверка полей на пустоту
+					if (func === '') {
+						return result.innerHTML = 'Вы не ввели сумму';
+					}
+					if (a === '' && b !== '') {
+						return result.innerHTML = 'Вы не ввели ставку';
+					}
+					if (a !== '' && b === '') {
+						return result.innerHTML = 'Вы не ввели время в годах';
+					}
+
+					//Выводим наращенную сумму
+					return result.innerHTML = Algebrite.eval(parseFloat(func)*(1+parseFloat(a))^parseFloat(b/365));
+				}
+				document.querySelector('#getResult4').onclick = () => {
+					//Получаем значение из полей ввода
+					let a = document.querySelector('#a4').value;
+					let b = document.querySelector('#b4').value;
+					let func = document.querySelector('#func4').value;
+					//Ссылка на тег вывода результата
+					let result = document.querySelector('#result4');
+					//Проверка полей на пустоту
+					if (func === '') {
+						return result.innerHTML = 'Вы не ввели сумму';
+					}
+					if (a === '' && b !== '') {
+						return result.innerHTML = 'Вы не ввели ставку';
+					}
+					if (a !== '' && b === '') {
+						return result.innerHTML = 'Вы не ввели время в годах';
+					}
+
+					//Выводим наращенную сумму
+					return result.innerHTML = Algebrite.eval(parseFloat(func)*(1+parseFloat(a))^parseFloat(b/360));
+				}
+				document.querySelector('#getResult5').onclick = () => {
+					//Получаем значение из полей ввода
+					let a = document.querySelector('#a5').value;
+					let b = document.querySelector('#b5').value;
+					let func = document.querySelector('#func5').value;
+					//Ссылка на тег вывода результата
+					let result = document.querySelector('#result5');
+					//Проверка полей на пустоту
+					if (func === '') {
+						return result.innerHTML = 'Вы не ввели сумму';
+					}
+					if (a === '' && b !== '') {
+						return result.innerHTML = 'Вы не ввели ставку';
+					}
+					if (a !== '' && b === '') {
+						return result.innerHTML = 'Вы не ввели время в годах';
+					}
+
+					//Выводим наращенную сумму
+					return result.innerHTML = Algebrite.eval(parseFloat(func)*(1-parseFloat(a))^parseFloat(b/365));
+				}
+
+				document.querySelector('#getResult6').onclick = () => {
+					//Получаем значение из полей ввода
+					let a = document.querySelector('#a6').value;
+					let b = document.querySelector('#b6').value;
+					let func = document.querySelector('#func6').value;
+					//Ссылка на тег вывода результата
+					let result = document.querySelector('#result6');
+					//Проверка полей на пустоту
+					if (func === '') {
+						return result.innerHTML = 'Вы не ввели сумму';
+					}
+					if (a === '' && b !== '') {
+						return result.innerHTML = 'Вы не ввели ставку';
+					}
+					if (a !== '' && b === '') {
+						return result.innerHTML = 'Вы не ввели время в годах';
+					}
+
+					//Выводим наращенную сумму
+					return result.innerHTML = Algebrite.eval(parseFloat(func)*(1-parseFloat(a))^parseFloat(b/365));
+				}
+				document.querySelector('#getResult7').onclick = () => {
+					//Получаем значение из полей ввода
+					let a = document.querySelector('#a7').value;
+					let b = document.querySelector('#b7').value;
+					let func = document.querySelector('#func7').value;
+					//Ссылка на тег вывода результата
+					let result = document.querySelector('#result7');
+					//Проверка полей на пустоту
+					if (func === '') {
+						return result.innerHTML = 'Вы не ввели сумму';
+					}
+					if (a === '' && b !== '') {
+						return result.innerHTML = 'Вы не ввели ставку';
+					}
+					if (a !== '' && b === '') {
+						return result.innerHTML = 'Вы не ввели время в годах';
+					}
+
+					//Выводим наращенную сумму
+					return result.innerHTML = Algebrite.eval(parseFloat(func)*(1-parseFloat(a))^parseFloat(b/365));
+				}
+				document.querySelector('#getResult8').onclick = () => {
+					//Получаем значение из полей ввода
+					let a = document.querySelector('#a8').value;
+					let b = document.querySelector('#b8').value;
+					let func = document.querySelector('#func8').value;
+					//Ссылка на тег вывода результата
+					let result = document.querySelector('#result8');
+					//Проверка полей на пустоту
+					if (func === '') {
+						return result.innerHTML = 'Вы не ввели сумму';
+					}
+					if (a === '' && b !== '') {
+						return result.innerHTML = 'Вы не ввели ставку';
+					}
+					if (a !== '' && b === '') {
+						return result.innerHTML = 'Вы не ввели время в годах';
+					}
+
+					//Выводим наращенную сумму
+					return result.innerHTML = Algebrite.eval(parseFloat(func)*(1+parseFloat(a))^parseFloat(b/360));
+				}
+
+				//Игра 1
+		
+				//Проверим, угадали ли мы площадь
+				
+
+			}
+			Reveal.initialize({
+				hash: true, //При обновлении страницы, будем возвращаться на туже страницу
+				center: false, //отменим вертикальное центрирование
+				slideNumber: true, //Покажем номер слайды
+				math: {
+					notificationsEnabled: true, //включаем отображение ошибок katex
+				},
+				menu: {
+					number: true,
+					markers: true,
+					keyboard: true,
+
+				},
+				//Подключаем LaTeX рендер
+				dependencies: [
+					{
+						src: 'plugin/math-katex/math-katex.js', //Подключаем рендер katex
+						async: true,
+						callback: () => {},
+					}, {
+						src: 'plugin/menu/menu.js',
+						async: true,
+					}],
+				//Рендер Маркдауна, Подвестка синтаксиса, Заметки
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
